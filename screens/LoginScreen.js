@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native'
 import { Button, Input, Image } from 'react-native-elements'
 import { StatusBar } from "expo-status-bar"
 import codingtopia from "../assets/codingtopia.jpg"
@@ -9,7 +9,7 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('')
 
     return (
-        <View>
+        <KeyboardAvoidingView behavior="padding " style={styles.container}>
             <StatusBar style="light" />
             <Image 
                 source={codingtopia}
@@ -19,25 +19,34 @@ const LoginScreen = () => {
             <View style={styles.inputContainer}>
                 <Input placeholder="Email" autoFocus type="email" value={email} onChangeText={(text) => setEmail(text)}/>
                 <Input placeholder="Password" secureTextEntry type="password" value={password} onChangeText={(text) => setPassword(text)}/>
-                <Button containerStyle={styles.button} title="Login" />
-                <Button containerStyle={styles.button} type="outline" title="Register" />
             </View>
-        </View> 
+
+            <Button containerStyle={styles.button} title="Login" />
+            <Button containerStyle={styles.button} type="outline" title="Register" />
+            <view style={{ height: 100 }} />
+        </KeyboardAvoidingView> 
     )
 }
 export default LoginScreen
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        backgroundColor: "white"
+    },
     imageLogo: {
-        width: 200, 
-        height: 200,
-        margin: 'auto',
-        marginTop: 20,
+        width: 150, 
+        height: 150,
         borderRadius: 20
     },
     inputContainer: {
         width: 300,
-        margin: 'auto'
     },
-    button: {}
+    button: {
+        width: 200,
+        marginTop: 10,
+    }
 })
