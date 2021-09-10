@@ -4,7 +4,7 @@ import { Button, Input, Image } from 'react-native-elements'
 import { StatusBar } from "expo-status-bar"
 import codingtopia from "../assets/codingtopia.jpg"
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -15,15 +15,14 @@ const LoginScreen = () => {
                 source={codingtopia}
                 style={styles.imageLogo}
             />
-            {/* <Text style={{textAlign: 'center', fontSize: 20, fontWeight: 700, marginTop: 10}}>CODINGTOPIA</Text> */}
             <View style={styles.inputContainer}>
                 <Input placeholder="Email" autoFocus type="email" value={email} onChangeText={(text) => setEmail(text)}/>
                 <Input placeholder="Password" secureTextEntry type="password" value={password} onChangeText={(text) => setPassword(text)}/>
             </View>
 
             <Button containerStyle={styles.button} title="Login" />
-            <Button containerStyle={styles.button} type="outline" title="Register" />
-            <view style={{ height: 100 }} />
+            <Button onPress={() => navigation.navigate('Register')} containerStyle={styles.button} type="outline" title="Register" />
+            <View style={{ height: 100 }} />
         </KeyboardAvoidingView> 
     )
 }
