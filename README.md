@@ -1,6 +1,16 @@
 # mobile-chat-app
 Chat application made with React native
 
+<p align="center">
+<img src="Readme_img/codingtopiaLogo.png" width=100 height="100"></img>
+<img src="Readme_img/codingtopiaLogo.png" width=100 height="100"></img>
+<img src="Readme_img/codingtopiaLogo.png" width=100 height="100"></img>
+</p>
+
+<p align="center">
+<img src="Readme_img/loginscreen.PNG"></img>
+</p>
+
 ``` shell
 expo init my-app
 npm install
