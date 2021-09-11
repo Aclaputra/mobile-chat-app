@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useLayoutEffect} from 'react'
 import { StyleSheet, View, KeyboardAvoidingView } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 import { Input, Text, Button } from 'react-native-elements'
+import { auth } from '../firebase'
 
 const RegisterScreen = ({ navigation }) => {
     const [name, setName] = useState('')
@@ -10,14 +11,23 @@ const RegisterScreen = ({ navigation }) => {
     const [imageUrl, setImageUrl] = useState('')
 
     // Note: Not working ! still find out what is the cause
-    
-    // useLayoutEffect(() => {
-    //     navigation.setOptions({
-    //         headerBackTitle: "Back to Login",
-    //     })
-    // }, [navigation])
 
-    const register = () => {}
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerBackTitle: "Back to Login",
+        })
+    }, [navigation])
+
+    const register = () => {
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((authUser) => {
+            authUser.user.update({
+                displayName: name,
+                photoURL: imageUrl || "https://www.allthetests.com/quiz22/picture/pic_1171831236_1.png"
+            })
+        })
+        .catch(error => alert(error.message))
+    }
     return (
         <KeyboardAvoidingView behaviour="padding" style={styles.container}>
             <StatusBar style="light" />
@@ -42,6 +52,7 @@ const RegisterScreen = ({ navigation }) => {
                     placeholder="Password"
                     type="password"
                     value={password}
+                    secureTextEntry
                     onChangeText={(text) => setPassword(text)}
                 />
                 <Input
