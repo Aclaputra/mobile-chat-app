@@ -30,7 +30,7 @@ const RegisterScreen = ({ navigation }) => {
     }
     return (
         <KeyboardAvoidingView behaviour="padding" style={styles.container}>
-            <StatusBar style="light" />
+            <StatusBar style="auto" />
 
             <Text h4 style={{marginBottom: 50}}>Create a Codingtopia account</Text>
 
