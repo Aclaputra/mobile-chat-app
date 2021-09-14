@@ -11,8 +11,12 @@ Chat application made with React native
 <img src="Readme_img/loginscreen.PNG"></img>
 </p>
 
+## first create your react native app:
 ``` shell
 expo init my-app
+```
+## install npm or yarn (up to you)
+``` shell
 npm install
 ```
 ``` shell
