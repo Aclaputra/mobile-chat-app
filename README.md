@@ -1,5 +1,5 @@
 # 📱 — mobile-chat-app
-Built chat application made with React native expo & firebase as database, login register authentication, react navigation
+Built mobile chat application made with React native expo & firebase as database, login register authentication, react navigation
 
 <p>
 <img src="Readme_img/codingtopiaLogo.png" width=100 height="100"></img>
