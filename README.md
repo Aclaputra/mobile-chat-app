@@ -1,6 +1,8 @@
 # mobile-chat-app
 Chat application made with React native
 
+<!-- signal clone sonny sangha -->
+
 <p>
 <img src="Readme_img/codingtopiaLogo.png" width=100 height="100"></img>
 <img src="Readme_img/codingtopiaLogo.png" width=100 height="100"></img>
