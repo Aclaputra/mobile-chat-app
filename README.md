@@ -1,5 +1,5 @@
-# mobile-chat-app
-Chat application made with React native
+# 📱 — mobile-chat-app
+Built mobile chat application made with React native expo & firebase as database, login register authentication, react navigation
 
 <!-- signal clone sonny sangha -->
 
@@ -13,10 +13,15 @@ Chat application made with React native
 <img src="Readme_img/loginscreen.PNG"></img>
 </p>
 
+## first create your react native app:
 ``` shell
 expo init my-app
+```
+## install npm or yarn (up to you)
+``` shell
 npm install
 ```
+## install react-navigation to make a navigation (fyi: this thing using stack)
 ``` shell
 npm install @react-navigation/native@^5.x
 expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
