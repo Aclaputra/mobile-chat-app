@@ -26,6 +26,7 @@ npm install
 npm install @react-navigation/native@^5.x
 expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
 ```
+## install react native elements & vector-icons
 ``` shell
 yarn add react-native-elements
 yarn add react-native-vector-icons
