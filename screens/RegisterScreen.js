@@ -21,7 +21,7 @@ const RegisterScreen = ({ navigation }) => {
     const register = () => {
         auth.createUserWithEmailAndPassword(email, password)
         .then((authUser) => {
-            authUser.user.update({
+            authUser.user.updateProfile({
                 displayName: name,
                 photoURL: imageUrl || "https://www.allthetests.com/quiz22/picture/pic_1171831236_1.png"
             })
