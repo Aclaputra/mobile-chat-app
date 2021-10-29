@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, View } from 'react-native'
 import { Button, Input, Image } from 'react-native-elements'
 import { StatusBar } from "expo-status-bar"
 import codingtopia from "../assets/codingtopia.jpg"
