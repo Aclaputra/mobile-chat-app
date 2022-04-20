@@ -1,5 +1,5 @@
 # 📱 — mobile-chat-app
-Built mobile chat application made with React native expo & firebase as database, login register authentication, react navigation
+Built Cross-platform mobile Chat application made with React native expo & firebase as database, login register authentication, react navigation
 
 <!-- signal clone sonny sangha -->
 
